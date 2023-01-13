@@ -1,5 +1,6 @@
 import './styles.css';
+import { headerTemplate } from './header';
+import { homeTemplate } from './home';
+// import foodImg from './food.webp';
 
-const title = document.createElement('h1');
-title.innerHTML = 'HELLO';
-document.body.appendChild(title);
+document.body.innerHTML = headerTemplate;
