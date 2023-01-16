@@ -1,6 +1,23 @@
 import './styles.css';
-import { headerTemplate } from './header';
-import { homeTemplate } from './home';
-// import foodImg from './food.webp';
+import { setHome as setHome} from './home.js';
 
-document.body.innerHTML = headerTemplate;
+const navList = document.querySelectorAll('li');
+console.log(navList)
+navList.forEach(el => el.addEventListener('click', switchContent));
+
+function switchContent(el) {
+    switch (el.target.innerHTML) {
+        case 'Menu':
+            setMenu();
+            break;
+        case 'About':
+            setAbout();
+            break;
+        case 'Contact':
+            setContact();
+            break;
+    }
+}
+
+setHome();
+
