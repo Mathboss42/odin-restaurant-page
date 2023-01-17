@@ -12,7 +12,7 @@
 }
 
 html {
-    height: 100%;
+    min-height: 100%;
 }
 
 * {
@@ -37,18 +37,19 @@ h1:hover {
 }
 
 h2 {
+    padding: 12px;
     color: white;
     font-size: xx-large;
     text-align: center;
     margin-bottom: 32px;
+    text-shadow: 2px 6px 6px rgba(28, 184, 163, 100);
 }
 
 p {
+    padding: 12px;
     color: white;
     font-size: x-large;
-    text-shadow: 2px 2px 2px rgba(28, 184, 163, 100);
-    width: 400px;
-    text-align: center;
+    text-shadow: 2px 4px 4px rgba(28, 184, 163, 100);
 }
 
 ul {
@@ -62,6 +63,8 @@ li {
     padding: 32px 32px;
     text-align: center;
     color: aliceblue;
+    cursor: pointer;
+    user-select: none;
 }
 
 li:hover {
@@ -89,6 +92,8 @@ li:active {
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     background-image: url(space-background.jpg);
     height: 100%;
 }
@@ -97,17 +102,30 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 200px;
     height: 100%;
 }
 
 .container {
     width: max(50%, 600px);
-    height: 100%;
-    background-color: rgba(104,170,170, 0.75);
+    height: 800px;
+    background-color: rgba(99, 168, 168, 0.3);
+}
+
+.food-container {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: 200px 200px;
+    gap: 24px;
+}
+
+.container > img {
+    width: 250px;
+    height: 200px;
+    padding: 10px;
 }
 
 .bubbles {
+    text-align: center;
     margin-top: 64px;
     width: 100%;
     display: flex;
@@ -115,16 +133,52 @@ body {
 }
 
 .boble {
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 128px;
-    padding-bottom: 128px;
+    margin-bottom: 200px;
+    width: max(25%, 400px);
 }
 
 .sub-cont {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 400px;
+    width: 400px;
+}
+
+.boble, .sub-cont {
+    background-color: rgba(99, 168, 168, 0.3);
+    border-radius: 15%;
+    box-shadow: 0px 5px 5px 0px rgba(17, 43, 41, 0.75);
+}
+
+form {
+    color: white;
+    background-color: #3d8c96;
+    width: 80%;
+    height: 400px;
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+input[type=text] {
+    height: 100%;
+}
+
+input[type=submit] {
+    margin-top: 10px;
+}
+
+form > label {
+    margin-top: 20px;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
 }
