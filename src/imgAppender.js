@@ -1,6 +1,10 @@
-export function appendImage(img, element) {
+export function appendImage(img, element, cssClass = '') {
     const newImg = new Image();
     newImg.src = img;
 
-    element.appendChild(newImg);
+    let newEl = element.appendChild(newImg);
+    
+    if (cssClass !== '') {
+        newEl.classList.add(cssClass);
+    }
 }

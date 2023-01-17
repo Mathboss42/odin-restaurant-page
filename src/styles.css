@@ -11,6 +11,10 @@
     font-style: normal;
 }
 
+html {
+    height: 100%;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -30,6 +34,13 @@ h1 {
 h1:hover {
     cursor: pointer;
     user-select: none;
+}
+
+h2 {
+    color: white;
+    font-size: xx-large;
+    text-align: center;
+    margin-bottom: 32px;
 }
 
 p {
@@ -65,11 +76,11 @@ li:active {
     display: flex;
     flex-direction: column;
     background-color: #68aaaa;
-    box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
     position: relative;    
 }
 
 .nav {
+    box-shadow: 0px 5px 5px 0px rgba(17, 43, 41, 0.75);
     display: flex;
     justify-content: center;
     background-color: #3d8c96;
@@ -79,6 +90,7 @@ li:active {
 
 body {
     background-image: url(space-background.jpg);
+    height: 100%;
 }
 
 .content {
@@ -86,4 +98,33 @@ body {
     flex-direction: column;
     align-items: center;
     margin-bottom: 200px;
+    height: 100%;
+}
+
+.container {
+    width: max(50%, 600px);
+    height: 100%;
+    background-color: rgba(104,170,170, 0.75);
+}
+
+.bubbles {
+    margin-top: 64px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.boble {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 128px;
+    padding-bottom: 128px;
+}
+
+.sub-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
 }
